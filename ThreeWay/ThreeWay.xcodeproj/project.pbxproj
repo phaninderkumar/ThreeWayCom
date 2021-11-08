@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		370879FE2738F9E300A03467 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370879FC2738F9E300A03467 /* Logger.swift */; };
+		370879FF2738F9E300A03467 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370879FC2738F9E300A03467 /* Logger.swift */; };
+		37087A002738F9E300A03467 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370879FC2738F9E300A03467 /* Logger.swift */; };
+		37087A012738F9E300A03467 /* OSLogExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370879FD2738F9E300A03467 /* OSLogExtension.swift */; };
+		37087A022738F9E300A03467 /* OSLogExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370879FD2738F9E300A03467 /* OSLogExtension.swift */; };
+		37087A032738F9E300A03467 /* OSLogExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370879FD2738F9E300A03467 /* OSLogExtension.swift */; };
 		37387E6B270D72F000E9ED09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37387E6A270D72F000E9ED09 /* AppDelegate.swift */; };
 		37387E6F270D72F500E9ED09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37387E6E270D72F500E9ED09 /* Assets.xcassets */; };
 		37387E7A270D742C00E9ED09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37387E70270D72F500E9ED09 /* Main.storyboard */; };
@@ -51,6 +57,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		370879FC2738F9E300A03467 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		370879FD2738F9E300A03467 /* OSLogExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSLogExtension.swift; sourceTree = "<group>"; };
 		37387E67270D72F000E9ED09 /* ThreeWay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreeWay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37387E6A270D72F000E9ED09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37387E6E270D72F500E9ED09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -126,6 +134,8 @@
 				37387E6A270D72F000E9ED09 /* AppDelegate.swift */,
 				37387E91270D7A0500E9ED09 /* UIUpdater.swift */,
 				3772E9892738F5080092BA14 /* ViewController.swift */,
+				370879FC2738F9E300A03467 /* Logger.swift */,
+				370879FD2738F9E300A03467 /* OSLogExtension.swift */,
 				37387E6E270D72F500E9ED09 /* Assets.xcassets */,
 				37387E70270D72F500E9ED09 /* Main.storyboard */,
 				37387E73270D72F500E9ED09 /* Info.plist */,
@@ -289,6 +299,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37087A012738F9E300A03467 /* OSLogExtension.swift in Sources */,
+				370879FE2738F9E300A03467 /* Logger.swift in Sources */,
 				37387E6B270D72F000E9ED09 /* AppDelegate.swift in Sources */,
 				3772E9882738F4160092BA14 /* DateExtension.swift in Sources */,
 				3772E98A2738F5080092BA14 /* ViewController.swift in Sources */,
@@ -301,6 +313,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3772E96F2738ECC50092BA14 /* MyServiceProtocol.swift in Sources */,
+				37087A022738F9E300A03467 /* OSLogExtension.swift in Sources */,
+				370879FF2738F9E300A03467 /* Logger.swift in Sources */,
 				3772E9862738F40D0092BA14 /* DateExtension.swift in Sources */,
 				3772E9702738ECC50092BA14 /* MyService.swift in Sources */,
 				3772E9662738EC7B0092BA14 /* main.swift in Sources */,
@@ -313,8 +327,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3772E97A2738F3420092BA14 /* ViewController.swift in Sources */,
+				37087A032738F9E300A03467 /* OSLogExtension.swift in Sources */,
 				3772E9872738F4160092BA14 /* DateExtension.swift in Sources */,
 				3772E9782738F3420092BA14 /* AppDelegate.swift in Sources */,
+				37087A002738F9E300A03467 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

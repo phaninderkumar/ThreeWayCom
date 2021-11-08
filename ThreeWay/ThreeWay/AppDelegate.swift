@@ -12,15 +12,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private var globalTimer: Timer?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        logger.info("UI Launched and running")
         initializeTimer()
-        // Insert code here to initialize your application
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
+        logger.info("UI will terminate")
     }
     
     func initializeTimer() {
+        logger.info("Initializing timer")
         guard globalTimer == nil else {
             return
         }
