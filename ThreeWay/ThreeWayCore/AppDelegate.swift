@@ -55,9 +55,28 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @objc func timerFired() {
-        logger.info("Timer fired")
+        launchApp()
     }
 
+    func launchApp() {
+        let bundleID = "com.phaninderkumar.ThreeWay"
+       let runningApplications =  NSRunningApplication.runningApplications(withBundleIdentifier: bundleID)
+        logger.info("Running application: \(runningApplications.count)")
+        for app in runningApplications {
+            logger.info("Running app: app")
+        }
+        guard runningApplications.count == 0 else { return }
+        let workspace = NSWorkspace.shared
+        
+        guard let url = NSWorkspace.shared.urlForApplication(withBundleIdentifier: "com.phaninderkumar.ThreeWay") else { return }
+
+        let path = "/bin"
+        let configuration = NSWorkspace.OpenConfiguration()
+        configuration.arguments = [path]
+        NSWorkspace.shared.openApplication(at: url,
+                                           configuration: configuration,
+                                           completionHandler: nil)
+    }
 
 }
 
