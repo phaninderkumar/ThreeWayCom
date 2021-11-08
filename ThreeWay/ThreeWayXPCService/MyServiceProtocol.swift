@@ -9,4 +9,5 @@ import Foundation
 
 @objc public protocol ThreeWayXPCServiceProtocol {
     func upperCaseString(_ string: String, withReply reply: @escaping (String) -> Void)
+    func getTime(withReply reply: @escaping (String) -> Void)
 }

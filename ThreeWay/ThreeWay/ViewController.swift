@@ -9,18 +9,26 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var label: NSTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshView(_:)), name: NSNotification.Name("TimeUpdated"), object: nil)
 
-        // Do any additional setup after loading the view.
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
+    @objc private func refreshView(_ notification: Notification) {
+        guard let info = notification.userInfo as? [String: String],
+              let response = info["response"] else { return }
+        DispatchQueue.main.async {
+            self.label.stringValue = response
         }
     }
-
+    
 
 }
 

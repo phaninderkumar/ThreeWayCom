@@ -33,8 +33,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @objc func timerFired() {
-        RemoteSupportUIUpdater.shared.updateString(string: "\(Date())")
-//        NotificationCenter.default.post(name: NSNotification.Name("TimerFired"), object: self, userInfo: nil)
+        RemoteSupportUIUpdater.shared.getTime()
     }
 
 

@@ -16,6 +16,14 @@
 		3772E96A2738EC7B0092BA14 /* ThreeWayXPCService.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = 3772E95F2738EC7B0092BA14 /* ThreeWayXPCService.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3772E96F2738ECC50092BA14 /* MyServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3772E9612738EC7B0092BA14 /* MyServiceProtocol.swift */; };
 		3772E9702738ECC50092BA14 /* MyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3772E9622738EC7B0092BA14 /* MyService.swift */; };
+		3772E9782738F3420092BA14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3772E9772738F3420092BA14 /* AppDelegate.swift */; };
+		3772E97A2738F3420092BA14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3772E9792738F3420092BA14 /* ViewController.swift */; };
+		3772E97C2738F3460092BA14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3772E97B2738F3460092BA14 /* Assets.xcassets */; };
+		3772E97F2738F3460092BA14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3772E97D2738F3460092BA14 /* Main.storyboard */; };
+		3772E9862738F40D0092BA14 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3772E9852738F40D0092BA14 /* DateExtension.swift */; };
+		3772E9872738F4160092BA14 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3772E9852738F40D0092BA14 /* DateExtension.swift */; };
+		3772E9882738F4160092BA14 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3772E9852738F40D0092BA14 /* DateExtension.swift */; };
+		3772E98A2738F5080092BA14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3772E9892738F5080092BA14 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +64,15 @@
 		3772E9632738EC7B0092BA14 /* MyServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyServiceDelegate.swift; sourceTree = "<group>"; };
 		3772E9652738EC7B0092BA14 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3772E9672738EC7B0092BA14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3772E9752738F3420092BA14 /* ThreeWayCore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreeWayCore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3772E9772738F3420092BA14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3772E9792738F3420092BA14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3772E97B2738F3460092BA14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3772E97E2738F3460092BA14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3772E9802738F3460092BA14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3772E9812738F3460092BA14 /* ThreeWayCore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ThreeWayCore.entitlements; sourceTree = "<group>"; };
+		3772E9852738F40D0092BA14 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		3772E9892738F5080092BA14 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +90,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3772E9722738F3420092BA14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,6 +105,7 @@
 			children = (
 				37387E69270D72F000E9ED09 /* ThreeWay */,
 				3772E9602738EC7B0092BA14 /* ThreeWayXPCService */,
+				3772E9762738F3420092BA14 /* ThreeWayCore */,
 				37387E68270D72F000E9ED09 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +115,7 @@
 			children = (
 				37387E67270D72F000E9ED09 /* ThreeWay.app */,
 				3772E95F2738EC7B0092BA14 /* ThreeWayXPCService.xpc */,
+				3772E9752738F3420092BA14 /* ThreeWayCore.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +125,7 @@
 			children = (
 				37387E6A270D72F000E9ED09 /* AppDelegate.swift */,
 				37387E91270D7A0500E9ED09 /* UIUpdater.swift */,
+				3772E9892738F5080092BA14 /* ViewController.swift */,
 				37387E6E270D72F500E9ED09 /* Assets.xcassets */,
 				37387E70270D72F500E9ED09 /* Main.storyboard */,
 				37387E73270D72F500E9ED09 /* Info.plist */,
@@ -112,11 +139,25 @@
 			children = (
 				3772E9612738EC7B0092BA14 /* MyServiceProtocol.swift */,
 				3772E9622738EC7B0092BA14 /* MyService.swift */,
+				3772E9852738F40D0092BA14 /* DateExtension.swift */,
 				3772E9632738EC7B0092BA14 /* MyServiceDelegate.swift */,
 				3772E9652738EC7B0092BA14 /* main.swift */,
 				3772E9672738EC7B0092BA14 /* Info.plist */,
 			);
 			path = ThreeWayXPCService;
+			sourceTree = "<group>";
+		};
+		3772E9762738F3420092BA14 /* ThreeWayCore */ = {
+			isa = PBXGroup;
+			children = (
+				3772E9772738F3420092BA14 /* AppDelegate.swift */,
+				3772E9792738F3420092BA14 /* ViewController.swift */,
+				3772E97B2738F3460092BA14 /* Assets.xcassets */,
+				3772E97D2738F3460092BA14 /* Main.storyboard */,
+				3772E9802738F3460092BA14 /* Info.plist */,
+				3772E9812738F3460092BA14 /* ThreeWayCore.entitlements */,
+			);
+			path = ThreeWayCore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +199,23 @@
 			productReference = 3772E95F2738EC7B0092BA14 /* ThreeWayXPCService.xpc */;
 			productType = "com.apple.product-type.xpc-service";
 		};
+		3772E9742738F3420092BA14 /* ThreeWayCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3772E9822738F3460092BA14 /* Build configuration list for PBXNativeTarget "ThreeWayCore" */;
+			buildPhases = (
+				3772E9712738F3420092BA14 /* Sources */,
+				3772E9722738F3420092BA14 /* Frameworks */,
+				3772E9732738F3420092BA14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ThreeWayCore;
+			productName = ThreeWayCore;
+			productReference = 3772E9752738F3420092BA14 /* ThreeWayCore.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -171,6 +229,9 @@
 						CreatedOnToolsVersion = 12.5.1;
 					};
 					3772E95E2738EC7B0092BA14 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					3772E9742738F3420092BA14 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
 				};
@@ -190,6 +251,7 @@
 			targets = (
 				37387E66270D72F000E9ED09 /* ThreeWay */,
 				3772E95E2738EC7B0092BA14 /* ThreeWayXPCService */,
+				3772E9742738F3420092BA14 /* ThreeWayCore */,
 			);
 		};
 /* End PBXProject section */
@@ -211,6 +273,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3772E9732738F3420092BA14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3772E97C2738F3460092BA14 /* Assets.xcassets in Resources */,
+				3772E97F2738F3460092BA14 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -219,6 +290,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				37387E6B270D72F000E9ED09 /* AppDelegate.swift in Sources */,
+				3772E9882738F4160092BA14 /* DateExtension.swift in Sources */,
+				3772E98A2738F5080092BA14 /* ViewController.swift in Sources */,
 				37387E92270D7A0500E9ED09 /* UIUpdater.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,9 +301,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				3772E96F2738ECC50092BA14 /* MyServiceProtocol.swift in Sources */,
+				3772E9862738F40D0092BA14 /* DateExtension.swift in Sources */,
 				3772E9702738ECC50092BA14 /* MyService.swift in Sources */,
 				3772E9662738EC7B0092BA14 /* main.swift in Sources */,
 				3772E9642738EC7B0092BA14 /* MyServiceDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3772E9712738F3420092BA14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3772E97A2738F3420092BA14 /* ViewController.swift in Sources */,
+				3772E9872738F4160092BA14 /* DateExtension.swift in Sources */,
+				3772E9782738F3420092BA14 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +333,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				37387E71270D72F500E9ED09 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3772E97D2738F3460092BA14 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3772E97E2738F3460092BA14 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -425,7 +517,7 @@
 					"$(LD_RUNPATH_SEARCH_PATHS_$(IS_MACCATALYST)_$(_BOOL_$(SKIP_INSTALL)))",
 					"@loader_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.phaninder.ThreeWayXPCService;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phaninderkumar.ThreeWayXPCService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
@@ -446,11 +538,53 @@
 					"$(LD_RUNPATH_SEARCH_PATHS_$(IS_MACCATALYST)_$(_BOOL_$(SKIP_INSTALL)))",
 					"@loader_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.phaninder.ThreeWayXPCService;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phaninderkumar.ThreeWayXPCService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		3772E9832738F3460092BA14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ThreeWayCore/ThreeWayCore.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SHW8SLS33C;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = ThreeWayCore/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.phaninderkumar.ThreeWayCore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3772E9842738F3460092BA14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ThreeWayCore/ThreeWayCore.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SHW8SLS33C;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = ThreeWayCore/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.phaninderkumar.ThreeWayCore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -481,6 +615,15 @@
 			buildConfigurations = (
 				3772E96C2738EC7B0092BA14 /* Debug */,
 				3772E96D2738EC7B0092BA14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3772E9822738F3460092BA14 /* Build configuration list for PBXNativeTarget "ThreeWayCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3772E9832738F3460092BA14 /* Debug */,
+				3772E9842738F3460092BA14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

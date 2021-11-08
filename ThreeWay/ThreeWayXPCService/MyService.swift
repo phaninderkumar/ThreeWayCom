@@ -12,4 +12,10 @@ class ThreeWayXPCService: NSObject, ThreeWayXPCServiceProtocol {
         let response = string.uppercased()
         reply(response)
     }
+    
+    func getTime(withReply reply: @escaping (String) -> Void) {
+        let date = Date()
+        reply(date.getLocalStringDate())
+    }
+
 }
