@@ -14,6 +14,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         logger.info("UI Launched and running")
         initializeTimer()
+        logger.info("calling doSomethingElse")
+
+        doSomethingElse()
+
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -37,6 +41,35 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         RemoteSupportUIUpdater.shared.getTime()
     }
 
+
+    func doSomethingElse() {
+        logger.info("called doSomethingElse")
+
+        /* Prepare Anonymous listenter endpoint */
+        let anonDelegate = AgentAnonDelegate()
+        let anonListener = NSXPCListener.anonymous()
+        anonListener.delegate = anonDelegate
+        anonListener.resume()
+        let anonEndpoint = anonListener.endpoint
+        /* Prepare connection to the daemon */
+        let daemonConnection = NSXPCConnection(machServiceName: "com.phaninderkumar.ThreeWayCoreAnon", options: NSXPCConnection.Options.privileged)
+        daemonConnection.remoteObjectInterface = NSXPCInterface(with: TestDaemonXPCProtocol.self)
+        daemonConnection.resume()
+        let daemon = daemonConnection.synchronousRemoteObjectProxyWithErrorHandler { error in
+            logger.info("Unable to connect to daemon: \(error)")
+        } as? TestDaemonXPCProtocol
+        /* Try to checkin... forever! */
+        var connectedToDaemon = false
+        while !connectedToDaemon {
+            daemon!.agentCheckIn(agentEndpoint: anonEndpoint) { (reply) in
+                logger.info("Passed endpoint to the deamon")
+                connectedToDaemon = true
+            }
+            sleep(10)
+        }
+        /* Nothing more to do here. Only doing work for the daemon */
+        logger.info("Agent is in the work loop")
+    }
 
 }
 
