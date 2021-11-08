@@ -34,8 +34,11 @@ class RemoteSupportUIUpdater {
             print("Received error:", error)
         } as? ThreeWayXPCServiceProtocol
         service?.getTime(withReply: { response in
-            let userInfo = ["response": response]
-            NotificationCenter.default.post(name: NSNotification.Name("TimeUpdated"), object: self, userInfo: userInfo)
+            AgentAnonManager.shared.getConvertedDate(response) { response in
+                let userInfo = ["response": response]
+                NotificationCenter.default.post(name: NSNotification.Name("TimeUpdated"), object: self, userInfo: userInfo)
+
+            }
         })
     }
 

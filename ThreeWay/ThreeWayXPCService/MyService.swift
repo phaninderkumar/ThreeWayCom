@@ -13,9 +13,9 @@ class ThreeWayXPCService: NSObject, ThreeWayXPCServiceProtocol {
         reply(response)
     }
     
-    func getTime(withReply reply: @escaping (String) -> Void) {
+    func getTime(withReply reply: @escaping (Date) -> Void) {
         let date = Date()
-        reply(date.getLocalStringDate())
+        reply(date)
     }
 
 }

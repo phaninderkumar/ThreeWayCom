@@ -23,6 +23,12 @@ import Foundation
             reply(false)
         }
     }
+    
+    func getDateString(_ date: Date, reply: @escaping (String) -> Void) {
+        logger.info("getDateString called")
+        reply(date.getLocalStringDate())
+    }
+    
 }
 
 class DaemonXPCServer : NSObject, NSXPCListenerDelegate {
