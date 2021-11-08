@@ -1,0 +1,491 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		37387E6B270D72F000E9ED09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37387E6A270D72F000E9ED09 /* AppDelegate.swift */; };
+		37387E6F270D72F500E9ED09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37387E6E270D72F500E9ED09 /* Assets.xcassets */; };
+		37387E7A270D742C00E9ED09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37387E70270D72F500E9ED09 /* Main.storyboard */; };
+		37387E92270D7A0500E9ED09 /* UIUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37387E91270D7A0500E9ED09 /* UIUpdater.swift */; };
+		3772E9642738EC7B0092BA14 /* MyServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3772E9632738EC7B0092BA14 /* MyServiceDelegate.swift */; };
+		3772E9662738EC7B0092BA14 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3772E9652738EC7B0092BA14 /* main.swift */; };
+		3772E96A2738EC7B0092BA14 /* ThreeWayXPCService.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = 3772E95F2738EC7B0092BA14 /* ThreeWayXPCService.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3772E96F2738ECC50092BA14 /* MyServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3772E9612738EC7B0092BA14 /* MyServiceProtocol.swift */; };
+		3772E9702738ECC50092BA14 /* MyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3772E9622738EC7B0092BA14 /* MyService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3772E9682738EC7B0092BA14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37387E5F270D72F000E9ED09 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3772E95E2738EC7B0092BA14;
+			remoteInfo = ThreeWayXPCService;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3772E96B2738EC7B0092BA14 /* Embed XPC Services */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				3772E96A2738EC7B0092BA14 /* ThreeWayXPCService.xpc in Embed XPC Services */,
+			);
+			name = "Embed XPC Services";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		37387E67270D72F000E9ED09 /* ThreeWay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreeWay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37387E6A270D72F000E9ED09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		37387E6E270D72F500E9ED09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37387E71270D72F500E9ED09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		37387E73270D72F500E9ED09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37387E74270D72F500E9ED09 /* ThreeWay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ThreeWay.entitlements; sourceTree = "<group>"; };
+		37387E91270D7A0500E9ED09 /* UIUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUpdater.swift; sourceTree = "<group>"; };
+		3772E95F2738EC7B0092BA14 /* ThreeWayXPCService.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = ThreeWayXPCService.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
+		3772E9612738EC7B0092BA14 /* MyServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyServiceProtocol.swift; sourceTree = "<group>"; };
+		3772E9622738EC7B0092BA14 /* MyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyService.swift; sourceTree = "<group>"; };
+		3772E9632738EC7B0092BA14 /* MyServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyServiceDelegate.swift; sourceTree = "<group>"; };
+		3772E9652738EC7B0092BA14 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		3772E9672738EC7B0092BA14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37387E64270D72F000E9ED09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3772E95C2738EC7B0092BA14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		37387E5E270D72F000E9ED09 = {
+			isa = PBXGroup;
+			children = (
+				37387E69270D72F000E9ED09 /* ThreeWay */,
+				3772E9602738EC7B0092BA14 /* ThreeWayXPCService */,
+				37387E68270D72F000E9ED09 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		37387E68270D72F000E9ED09 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37387E67270D72F000E9ED09 /* ThreeWay.app */,
+				3772E95F2738EC7B0092BA14 /* ThreeWayXPCService.xpc */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37387E69270D72F000E9ED09 /* ThreeWay */ = {
+			isa = PBXGroup;
+			children = (
+				37387E6A270D72F000E9ED09 /* AppDelegate.swift */,
+				37387E91270D7A0500E9ED09 /* UIUpdater.swift */,
+				37387E6E270D72F500E9ED09 /* Assets.xcassets */,
+				37387E70270D72F500E9ED09 /* Main.storyboard */,
+				37387E73270D72F500E9ED09 /* Info.plist */,
+				37387E74270D72F500E9ED09 /* ThreeWay.entitlements */,
+			);
+			path = ThreeWay;
+			sourceTree = "<group>";
+		};
+		3772E9602738EC7B0092BA14 /* ThreeWayXPCService */ = {
+			isa = PBXGroup;
+			children = (
+				3772E9612738EC7B0092BA14 /* MyServiceProtocol.swift */,
+				3772E9622738EC7B0092BA14 /* MyService.swift */,
+				3772E9632738EC7B0092BA14 /* MyServiceDelegate.swift */,
+				3772E9652738EC7B0092BA14 /* main.swift */,
+				3772E9672738EC7B0092BA14 /* Info.plist */,
+			);
+			path = ThreeWayXPCService;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37387E66270D72F000E9ED09 /* ThreeWay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37387E77270D72F500E9ED09 /* Build configuration list for PBXNativeTarget "ThreeWay" */;
+			buildPhases = (
+				37387E63270D72F000E9ED09 /* Sources */,
+				37387E64270D72F000E9ED09 /* Frameworks */,
+				37387E65270D72F000E9ED09 /* Resources */,
+				3772E96B2738EC7B0092BA14 /* Embed XPC Services */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3772E9692738EC7B0092BA14 /* PBXTargetDependency */,
+			);
+			name = ThreeWay;
+			productName = ThreeWay;
+			productReference = 37387E67270D72F000E9ED09 /* ThreeWay.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3772E95E2738EC7B0092BA14 /* ThreeWayXPCService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3772E96E2738EC7B0092BA14 /* Build configuration list for PBXNativeTarget "ThreeWayXPCService" */;
+			buildPhases = (
+				3772E95B2738EC7B0092BA14 /* Sources */,
+				3772E95C2738EC7B0092BA14 /* Frameworks */,
+				3772E95D2738EC7B0092BA14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ThreeWayXPCService;
+			productName = ThreeWayXPCService;
+			productReference = 3772E95F2738EC7B0092BA14 /* ThreeWayXPCService.xpc */;
+			productType = "com.apple.product-type.xpc-service";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		37387E5F270D72F000E9ED09 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					37387E66270D72F000E9ED09 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					3772E95E2738EC7B0092BA14 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = 37387E62270D72F000E9ED09 /* Build configuration list for PBXProject "ThreeWay" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 37387E5E270D72F000E9ED09;
+			productRefGroup = 37387E68270D72F000E9ED09 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37387E66270D72F000E9ED09 /* ThreeWay */,
+				3772E95E2738EC7B0092BA14 /* ThreeWayXPCService */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		37387E65270D72F000E9ED09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37387E6F270D72F500E9ED09 /* Assets.xcassets in Resources */,
+				37387E7A270D742C00E9ED09 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3772E95D2738EC7B0092BA14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		37387E63270D72F000E9ED09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37387E6B270D72F000E9ED09 /* AppDelegate.swift in Sources */,
+				37387E92270D7A0500E9ED09 /* UIUpdater.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3772E95B2738EC7B0092BA14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3772E96F2738ECC50092BA14 /* MyServiceProtocol.swift in Sources */,
+				3772E9702738ECC50092BA14 /* MyService.swift in Sources */,
+				3772E9662738EC7B0092BA14 /* main.swift in Sources */,
+				3772E9642738EC7B0092BA14 /* MyServiceDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3772E9692738EC7B0092BA14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3772E95E2738EC7B0092BA14 /* ThreeWayXPCService */;
+			targetProxy = 3772E9682738EC7B0092BA14 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		37387E70270D72F500E9ED09 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37387E71270D72F500E9ED09 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		37387E75270D72F500E9ED09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		37387E76270D72F500E9ED09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		37387E78270D72F500E9ED09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ThreeWay/ThreeWay.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SHW8SLS33C;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = ThreeWay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.phaninderkumar.ThreeWay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		37387E79270D72F500E9ED09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ThreeWay/ThreeWay.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SHW8SLS33C;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = ThreeWay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.phaninderkumar.ThreeWay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		3772E96C2738EC7B0092BA14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SHW8SLS33C;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = ThreeWayXPCService/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(LD_RUNPATH_SEARCH_PATHS_$(IS_MACCATALYST)_$(_BOOL_$(SKIP_INSTALL)))",
+					"@loader_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.phaninder.ThreeWayXPCService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3772E96D2738EC7B0092BA14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SHW8SLS33C;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = ThreeWayXPCService/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(LD_RUNPATH_SEARCH_PATHS_$(IS_MACCATALYST)_$(_BOOL_$(SKIP_INSTALL)))",
+					"@loader_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.phaninder.ThreeWayXPCService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		37387E62270D72F000E9ED09 /* Build configuration list for PBXProject "ThreeWay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37387E75270D72F500E9ED09 /* Debug */,
+				37387E76270D72F500E9ED09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37387E77270D72F500E9ED09 /* Build configuration list for PBXNativeTarget "ThreeWay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37387E78270D72F500E9ED09 /* Debug */,
+				37387E79270D72F500E9ED09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3772E96E2738EC7B0092BA14 /* Build configuration list for PBXNativeTarget "ThreeWayXPCService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3772E96C2738EC7B0092BA14 /* Debug */,
+				3772E96D2738EC7B0092BA14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 37387E5F270D72F000E9ED09 /* Project object */;
+}
