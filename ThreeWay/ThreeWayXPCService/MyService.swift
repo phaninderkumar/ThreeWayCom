@@ -25,4 +25,9 @@ class ThreeWayXPCService: NSObject, ThreeWayXPCServiceProtocol {
         reply(obj)
     }
 
+    func processCustomObject(_ obj: TestObject) {
+        logger.info("received custom object: \(obj.displayTime)")
+
+    }
+    
 }

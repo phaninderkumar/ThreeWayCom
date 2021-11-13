@@ -22,6 +22,7 @@ class RemoteSupportUIUpdater {
     func getTime() {
         coreDaemon?.getCustomObject(withReply: { obj in
             print("obj: \(obj.displayTime)")
+            self.coreDaemon?.processCustomObject(obj)
         })
     }
 
@@ -48,6 +49,7 @@ class RemoteSupportUIUpdater {
         let connection = NSXPCConnection(serviceName: "com.phaninderkumar.ThreeWayXPCService")
         let remoteObjectInterface = NSXPCInterface(with: ThreeWayXPCServiceProtocol.self)
         remoteObjectInterface.setClasses(NSSet(array: [NSNumber.self, TestObject.self]) as! Set<AnyHashable>, for: #selector(ThreeWayXPCServiceProtocol.getCustomObject(withReply:)), argumentIndex: 0, ofReply: true)
+
         connection.remoteObjectInterface = remoteObjectInterface
         
         connection.resume()

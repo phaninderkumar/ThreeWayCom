@@ -12,4 +12,6 @@ import ThreeWayCommon
     func upperCaseString(_ string: String, withReply reply: @escaping (String) -> Void)
     func getTime(withReply reply: @escaping (Date) -> Void)
     func getCustomObject(withReply reply: @escaping(TestObject) -> Void)
+    func processCustomObject(_ obj: TestObject)
+    
 }
