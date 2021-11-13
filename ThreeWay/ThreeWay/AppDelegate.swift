@@ -13,8 +13,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         logger.info("UI Launched and running")
-        initializeTimer()
-        AgentAnonManager.shared.connect()
+        DispatchQueue.main.async {
+            self.initializeTimer()
+        }
+//        AgentAnonManager.shared.connect()
         
     }
 
@@ -36,6 +38,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @objc func timerFired() {
+        RemoteSupportUIUpdater.shared.checkAndConnect()
         RemoteSupportUIUpdater.shared.getTime()
     }
 

@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import ThreeWayCommon
 
 @objc public protocol ThreeWayXPCServiceProtocol {
     func upperCaseString(_ string: String, withReply reply: @escaping (String) -> Void)
     func getTime(withReply reply: @escaping (Date) -> Void)
+    func getCustomObject(withReply reply: @escaping(TestObject) -> Void)
 }

@@ -34,6 +34,18 @@
 		3772E9872738F4160092BA14 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3772E9852738F40D0092BA14 /* DateExtension.swift */; };
 		3772E9882738F4160092BA14 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3772E9852738F40D0092BA14 /* DateExtension.swift */; };
 		3772E98A2738F5080092BA14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3772E9892738F5080092BA14 /* ViewController.swift */; };
+		37C5B3C927401938002C83EA /* OSLogExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5B3C727401938002C83EA /* OSLogExtension.swift */; };
+		37C5B3CA27401938002C83EA /* OSLogExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5B3C727401938002C83EA /* OSLogExtension.swift */; };
+		37C5B3CB27401938002C83EA /* OSLogExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5B3C727401938002C83EA /* OSLogExtension.swift */; };
+		37C5B3CC27401938002C83EA /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5B3C827401938002C83EA /* Logger.swift */; };
+		37C5B3CD27401938002C83EA /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5B3C827401938002C83EA /* Logger.swift */; };
+		37C5B3CE27401938002C83EA /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5B3C827401938002C83EA /* Logger.swift */; };
+		37C5B3DD27402D14002C83EA /* ThreeWayCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C5B3DB27402D14002C83EA /* ThreeWayCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37C5B3E027402D14002C83EA /* ThreeWayCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C5B3D927402D14002C83EA /* ThreeWayCommon.framework */; };
+		37C5B3E127402D14002C83EA /* ThreeWayCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37C5B3D927402D14002C83EA /* ThreeWayCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		37C5B3E627402D1C002C83EA /* TestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5B3D027401B8D002C83EA /* TestObject.swift */; };
+		37C5B3E827402DB6002C83EA /* ThreeWayCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C5B3D927402D14002C83EA /* ThreeWayCommon.framework */; };
+		37C5B3E927402DB6002C83EA /* ThreeWayCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37C5B3D927402D14002C83EA /* ThreeWayCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +55,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 3772E95E2738EC7B0092BA14;
 			remoteInfo = ThreeWayXPCService;
+		};
+		37C5B3DE27402D14002C83EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37387E5F270D72F000E9ED09 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37C5B3D827402D14002C83EA;
+			remoteInfo = ThreeWayCommon;
+		};
+		37C5B3EA27402DB6002C83EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37387E5F270D72F000E9ED09 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37C5B3D827402D14002C83EA;
+			remoteInfo = ThreeWayCommon;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -56,6 +82,28 @@
 				3772E96A2738EC7B0092BA14 /* ThreeWayXPCService.xpc in Embed XPC Services */,
 			);
 			name = "Embed XPC Services";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37C5B3E527402D14002C83EA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				37C5B3E127402D14002C83EA /* ThreeWayCommon.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37C5B3EC27402DB6002C83EA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				37C5B3E927402DB6002C83EA /* ThreeWayCommon.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -89,6 +137,12 @@
 		3772E9812738F3460092BA14 /* ThreeWayCore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ThreeWayCore.entitlements; sourceTree = "<group>"; };
 		3772E9852738F40D0092BA14 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		3772E9892738F5080092BA14 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		37C5B3C727401938002C83EA /* OSLogExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSLogExtension.swift; sourceTree = "<group>"; };
+		37C5B3C827401938002C83EA /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		37C5B3D027401B8D002C83EA /* TestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestObject.swift; sourceTree = "<group>"; };
+		37C5B3D927402D14002C83EA /* ThreeWayCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ThreeWayCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37C5B3DB27402D14002C83EA /* ThreeWayCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreeWayCommon.h; sourceTree = "<group>"; };
+		37C5B3DC27402D14002C83EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37C5B3E027402D14002C83EA /* ThreeWayCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,10 +158,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37C5B3E827402DB6002C83EA /* ThreeWayCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3772E9722738F3420092BA14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37C5B3D627402D14002C83EA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -119,10 +182,13 @@
 		37387E5E270D72F000E9ED09 = {
 			isa = PBXGroup;
 			children = (
+				37C5B3CF27401B7A002C83EA /* Common */,
 				37387E69270D72F000E9ED09 /* ThreeWay */,
 				3772E9602738EC7B0092BA14 /* ThreeWayXPCService */,
 				3772E9762738F3420092BA14 /* ThreeWayCore */,
+				37C5B3DA27402D14002C83EA /* ThreeWayCommon */,
 				37387E68270D72F000E9ED09 /* Products */,
+				37C5B3E727402DB6002C83EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +198,7 @@
 				37387E67270D72F000E9ED09 /* ThreeWay.app */,
 				3772E95F2738EC7B0092BA14 /* ThreeWayXPCService.xpc */,
 				3772E9752738F3420092BA14 /* ThreeWayCore.app */,
+				37C5B3D927402D14002C83EA /* ThreeWayCommon.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,6 +208,8 @@
 			children = (
 				37387E6A270D72F000E9ED09 /* AppDelegate.swift */,
 				37387E91270D7A0500E9ED09 /* UIUpdater.swift */,
+				37C5B3C827401938002C83EA /* Logger.swift */,
+				37C5B3C727401938002C83EA /* OSLogExtension.swift */,
 				3772E9892738F5080092BA14 /* ViewController.swift */,
 				370879FC2738F9E300A03467 /* Logger.swift */,
 				370879FD2738F9E300A03467 /* OSLogExtension.swift */,
@@ -182,7 +251,42 @@
 			path = ThreeWayCore;
 			sourceTree = "<group>";
 		};
+		37C5B3CF27401B7A002C83EA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		37C5B3DA27402D14002C83EA /* ThreeWayCommon */ = {
+			isa = PBXGroup;
+			children = (
+				37C5B3D027401B8D002C83EA /* TestObject.swift */,
+				37C5B3DB27402D14002C83EA /* ThreeWayCommon.h */,
+				37C5B3DC27402D14002C83EA /* Info.plist */,
+			);
+			path = ThreeWayCommon;
+			sourceTree = "<group>";
+		};
+		37C5B3E727402DB6002C83EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		37C5B3D427402D14002C83EA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37C5B3DD27402D14002C83EA /* ThreeWayCommon.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		37387E66270D72F000E9ED09 /* ThreeWay */ = {
@@ -193,11 +297,13 @@
 				37387E64270D72F000E9ED09 /* Frameworks */,
 				37387E65270D72F000E9ED09 /* Resources */,
 				3772E96B2738EC7B0092BA14 /* Embed XPC Services */,
+				37C5B3E527402D14002C83EA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				3772E9692738EC7B0092BA14 /* PBXTargetDependency */,
+				37C5B3DF27402D14002C83EA /* PBXTargetDependency */,
 			);
 			name = ThreeWay;
 			productName = ThreeWay;
@@ -211,10 +317,12 @@
 				3772E95B2738EC7B0092BA14 /* Sources */,
 				3772E95C2738EC7B0092BA14 /* Frameworks */,
 				3772E95D2738EC7B0092BA14 /* Resources */,
+				37C5B3EC27402DB6002C83EA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				37C5B3EB27402DB6002C83EA /* PBXTargetDependency */,
 			);
 			name = ThreeWayXPCService;
 			productName = ThreeWayXPCService;
@@ -238,6 +346,24 @@
 			productReference = 3772E9752738F3420092BA14 /* ThreeWayCore.app */;
 			productType = "com.apple.product-type.application";
 		};
+		37C5B3D827402D14002C83EA /* ThreeWayCommon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37C5B3E227402D14002C83EA /* Build configuration list for PBXNativeTarget "ThreeWayCommon" */;
+			buildPhases = (
+				37C5B3D427402D14002C83EA /* Headers */,
+				37C5B3D527402D14002C83EA /* Sources */,
+				37C5B3D627402D14002C83EA /* Frameworks */,
+				37C5B3D727402D14002C83EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ThreeWayCommon;
+			productName = ThreeWayCommon;
+			productReference = 37C5B3D927402D14002C83EA /* ThreeWayCommon.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -254,6 +380,9 @@
 						CreatedOnToolsVersion = 12.5.1;
 					};
 					3772E9742738F3420092BA14 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					37C5B3D827402D14002C83EA = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
 				};
@@ -274,6 +403,7 @@
 				37387E66270D72F000E9ED09 /* ThreeWay */,
 				3772E95E2738EC7B0092BA14 /* ThreeWayXPCService */,
 				3772E9742738F3420092BA14 /* ThreeWayCore */,
+				37C5B3D827402D14002C83EA /* ThreeWayCommon */,
 			);
 		};
 /* End PBXProject section */
@@ -304,6 +434,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		37C5B3D727402D14002C83EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -316,7 +453,9 @@
 				37387E6B270D72F000E9ED09 /* AppDelegate.swift in Sources */,
 				3772E9882738F4160092BA14 /* DateExtension.swift in Sources */,
 				3772E98A2738F5080092BA14 /* ViewController.swift in Sources */,
+				37C5B3CC27401938002C83EA /* Logger.swift in Sources */,
 				37387E92270D7A0500E9ED09 /* UIUpdater.swift in Sources */,
+				37C5B3C927401938002C83EA /* OSLogExtension.swift in Sources */,
 				37087A172739705200A03467 /* AgentXPC.swift in Sources */,
 				37087A182739705C00A03467 /* Protocols.swift in Sources */,
 			);
@@ -326,9 +465,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37C5B3CA27401938002C83EA /* OSLogExtension.swift in Sources */,
 				3772E96F2738ECC50092BA14 /* MyServiceProtocol.swift in Sources */,
 				37087A022738F9E300A03467 /* OSLogExtension.swift in Sources */,
 				370879FF2738F9E300A03467 /* Logger.swift in Sources */,
+				37C5B3CD27401938002C83EA /* Logger.swift in Sources */,
 				3772E9862738F40D0092BA14 /* DateExtension.swift in Sources */,
 				3772E9702738ECC50092BA14 /* MyService.swift in Sources */,
 				3772E9662738EC7B0092BA14 /* main.swift in Sources */,
@@ -340,13 +481,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37C5B3CB27401938002C83EA /* OSLogExtension.swift in Sources */,
 				3772E97A2738F3420092BA14 /* ViewController.swift in Sources */,
 				37087A032738F9E300A03467 /* OSLogExtension.swift in Sources */,
 				37087A16273927B100A03467 /* Protocols.swift in Sources */,
+				37C5B3CE27401938002C83EA /* Logger.swift in Sources */,
 				3772E9872738F4160092BA14 /* DateExtension.swift in Sources */,
 				37087A11273925FB00A03467 /* DaemonXPC.swift in Sources */,
 				3772E9782738F3420092BA14 /* AppDelegate.swift in Sources */,
 				37087A002738F9E300A03467 /* Logger.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37C5B3D527402D14002C83EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37C5B3E627402D1C002C83EA /* TestObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +508,16 @@
 			isa = PBXTargetDependency;
 			target = 3772E95E2738EC7B0092BA14 /* ThreeWayXPCService */;
 			targetProxy = 3772E9682738EC7B0092BA14 /* PBXContainerItemProxy */;
+		};
+		37C5B3DF27402D14002C83EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37C5B3D827402D14002C83EA /* ThreeWayCommon */;
+			targetProxy = 37C5B3DE27402D14002C83EA /* PBXContainerItemProxy */;
+		};
+		37C5B3EB27402DB6002C83EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37C5B3D827402D14002C83EA /* ThreeWayCommon */;
+			targetProxy = 37C5B3EA27402DB6002C83EA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -498,6 +659,7 @@
 		37387E78270D72F500E9ED09 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ThreeWay/ThreeWay.entitlements;
@@ -519,6 +681,7 @@
 		37387E79270D72F500E9ED09 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ThreeWay/ThreeWay.entitlements;
@@ -623,6 +786,62 @@
 			};
 			name = Release;
 		};
+		37C5B3E327402D14002C83EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = SHW8SLS33C;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ThreeWayCommon/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.promobitech.remotecast.ThreeWayCommon;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		37C5B3E427402D14002C83EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = SHW8SLS33C;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ThreeWayCommon/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.promobitech.remotecast.ThreeWayCommon;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -658,6 +877,15 @@
 			buildConfigurations = (
 				3772E9832738F3460092BA14 /* Debug */,
 				3772E9842738F3460092BA14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37C5B3E227402D14002C83EA /* Build configuration list for PBXNativeTarget "ThreeWayCommon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37C5B3E327402D14002C83EA /* Debug */,
+				37C5B3E427402D14002C83EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
