@@ -7,22 +7,64 @@
 
 import Foundation
 import ThreeWayXPCService
+import ThreeWayCommon
+import IOSurface
 
 class RemoteSupportUIUpdater {
     static let shared = RemoteSupportUIUpdater()
+    var connectedToDaemon = false
+    var coreDaemon: ThreeWayXPCServiceProtocol?
+    var lastConnectionTriedAt: Double = 0
     
+
     func updateString(string: String) {
-        let connection = NSXPCConnection(serviceName: "com.phaninder.ThreeWayXPCService")
-        connection.remoteObjectInterface = NSXPCInterface(with: ThreeWayXPCServiceProtocol.self)
-        connection.resume()
-
-        let service = connection.remoteObjectProxyWithErrorHandler { error in
-            print("Received error:", error)
-        } as? ThreeWayXPCServiceProtocol
-
-        service?.upperCaseString("hello XPC") { response in
-            print("Response from XPC service:", response)
-        }
+    }
+    
+    func getTime() {
+        coreDaemon?.getCustomObject(withReply: { obj in
+            print("obj: \(obj.displayTime)")
+            self.coreDaemon?.processCustomObject(obj)
+        })
     }
 
+    func checkAndConnect() {
+        guard shouldTryForConnection() else { return }
+        guard !connectedToDaemon else {
+//            logger.info("Already connected")
+            return
+        }
+        connect()
+    }
+    
+    private func shouldTryForConnection() -> Bool {
+        if lastConnectionTriedAt == 0 {
+            return true
+        }
+        return Date().timeIntervalSince1970 - lastConnectionTriedAt > 5
+    }
+    
+    func connect() {
+        lastConnectionTriedAt = Date().timeIntervalSince1970
+        logger.info("called connect")
+
+        let connection = NSXPCConnection(serviceName: "com.phaninderkumar.ThreeWayXPCService")
+        let remoteObjectInterface = NSXPCInterface(with: ThreeWayXPCServiceProtocol.self)
+        remoteObjectInterface.setClasses(NSSet(array: [NSNumber.self, TestObject.self]) as! Set<AnyHashable>, for: #selector(ThreeWayXPCServiceProtocol.getCustomObject(withReply:)), argumentIndex: 0, ofReply: true)
+
+        connection.remoteObjectInterface = remoteObjectInterface
+        
+        connection.resume()
+        coreDaemon = connection.synchronousRemoteObjectProxyWithErrorHandler { error in
+            logger.info("Unable to connect to daemon: \(error)")
+        } as? ThreeWayXPCServiceProtocol
+        /* Try to checkin... forever! */
+    }
+
+    
+    func sendFrame(surface: IOSurfaceRef, displayTime: UInt64) {
+        let xpcSurfaceRef = IOSurfaceCreateXPCObject(surface)
+        logger.info("sending frame")
+        coreDaemon?.sendFrame(xpcSurfaceRef)
+    }
+    
 }
