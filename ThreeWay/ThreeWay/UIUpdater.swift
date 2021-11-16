@@ -8,6 +8,7 @@
 import Foundation
 import ThreeWayXPCService
 import ThreeWayCommon
+import IOSurface
 
 class RemoteSupportUIUpdater {
     static let shared = RemoteSupportUIUpdater()
@@ -59,4 +60,11 @@ class RemoteSupportUIUpdater {
         /* Try to checkin... forever! */
     }
 
+    
+    func sendFrame(surface: IOSurfaceRef, displayTime: UInt64) {
+        let xpcSurfaceRef = IOSurfaceCreateXPCObject(surface)
+        logger.info("sending frame")
+        coreDaemon?.sendFrame(xpcSurfaceRef)
+    }
+    
 }

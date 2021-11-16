@@ -7,8 +7,10 @@
 
 import Foundation
 import ThreeWayCommon
+import IOSurface
 
 class ThreeWayXPCService: NSObject, ThreeWayXPCServiceProtocol {
+    
     func upperCaseString(_ string: String, withReply reply: @escaping (String) -> Void) {
         let response = string.uppercased()
         reply(response)
@@ -30,4 +32,8 @@ class ThreeWayXPCService: NSObject, ThreeWayXPCServiceProtocol {
 
     }
     
+    func sendFrame(_ obj: xpc_object_t) {
+        logger.info("received custom object: \(obj)")
+
+    }
 }
